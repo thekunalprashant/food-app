@@ -1,0 +1,27 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is a namaste react series",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "Kunal",
+  "license": "ISC",
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "parcel": "^2.9.3",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3",
+    "util": "^0.12.5"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0"
+  },
+  "browsersList": [
+    "last 10 versions"
+  ]
+}
