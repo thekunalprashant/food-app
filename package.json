@@ -2,15 +2,19 @@
   "name": "namaste-react",
   "version": "1.0.0",
   "description": "This is a namaste react series",
+  "homepage": "https://thekunalprashant.github.io",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Kunal",
   "license": "ISC",
   "devDependencies": {
     "assert": "^2.0.0",
+    "gh-pages": "^6.0.0",
     "parcel": "^2.9.3",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
