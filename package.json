@@ -9,6 +9,7 @@
     "test": "jest",
     "predeploy": "npm run build"
   },
+  "alias": { "process": false },
   "author": "Kunal",
   "license": "ISC",
   "devDependencies": {
