@@ -1,7 +1,12 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 const ItemCard = ({ items }) => {
-  console.log(items);
+  const dispatch = useDispatch();
+  const handleAddItems = (item) => {
+    dispatch(addItem(item));
+  };
   return (
     <div className="px-4 bg-white">
       {items.map((item) => (
@@ -26,7 +31,10 @@ const ItemCard = ({ items }) => {
               src={CDN_URL + item.card.info.imageId}
               alt="Api off"
             />
-            <button className="absolute bottom-[-12px] px-4 py-1 shadow-lg  bg-green-300 hover:bg-green-500 text-black justify-self-center">
+            <button
+              onClick={()=>handleAddItems(item)}
+              className="absolute bottom-[-12px] px-4 py-1 shadow-lg  bg-green-300 hover:bg-green-500 text-black justify-self-center"
+            >
               Add +
             </button>
           </div>
