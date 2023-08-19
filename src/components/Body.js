@@ -5,7 +5,7 @@ import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { Link } from "react-router-dom";
 import PromotedCard from "./PromotedCard";
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [resList, setResList] = useState(dataList);
@@ -13,7 +13,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const onlineStatus = useOnlineStatus();
   const ResPromotedCard = PromotedCard(ResCard);
-  const {setUserName, loggedInUser} = useContext(UserContext);
+  const { setUserName, loggedInUser } = useContext(UserContext);
   const TopList = () => {
     setFilteredList(resList.filter((res) => res.info.avgRating > 4));
   };
@@ -48,7 +48,12 @@ const Body = () => {
             Top Rated Restaurant
           </button>
           <label className="mx-2">UserName: </label>
-          <input type="text" className="px-1 py-2 border"  value={loggedInUser} onChange={(e)=>setUserName(e.target.value)} />
+          <input
+            type="text"
+            className="px-1 py-2 border"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
         </div>
         <div className="m-4 p-4 w-2/4 flex justify-end">
           <input
